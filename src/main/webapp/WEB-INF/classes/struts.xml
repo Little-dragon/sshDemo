@@ -8,8 +8,20 @@
    <constant name="struts.objectFactory" value="spring"></constant>
 
     <package name="helloworld" extends="struts-default" namespace="/">
-    	<action name="register" class="memberAction" method="execute">
-    		<result name="success">/success.jsp</result>
+    	<action name="register" class="memberRegisterAction" method="execute">
+    		<result name="success" type="redirectAction">/query</result>
+    	</action>
+    	<action name="query" class="memberQueryAction" method="execute">
+    		<result name="success">/displayAll.jsp</result>
+    	</action>
+    	<action name="show" class="memberUpdateAction" method="showMember">
+    		<result name="success">/update.jsp</result>
+    	</action>
+    	<action name="update" class="memberUpdateAction" method="execute">
+    		<result name="success" type="redirectAction">/query</result>
+    	</action>
+    	<action name="delete" class="memberDeleteAction" method="execute">
+    		<result name="success" type="redirectAction">/query</result>
     	</action>
     </package>
 </struts>
