@@ -7,7 +7,6 @@
 <title>主页</title>
 </head>
 <body>
-		<form action="query" method="post">
-		</form>
+		<h1>你好,Administrator!</h1>
 </body>
 </html>
